@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+           
+            center{
+                padding:50px;
+                border:10px;
+                border-style:ridge;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 450px;
+                margin-left:350px;
+                align:center;}
+            
+            
+          
+            input[type="submit"]{
+                color:white     ;
+                padding:10px;
+                align=left;
+                
+                background-color:green;
+            }
+            
+            button{
+                color:white     ;
+                background-color:green;
+            }
+            h1{
+                padding:70px;
+                border-style:hidden;
+                margin-bottom:10px;
+            }
+        </style>
+    </head>
+    <body bgcolor='purple'>
+        <header>
+            <div class="login1">  <h1 align="center"> LOGIN PAGE</h1>
+             </div>
+            <div>
+            </div>
+            <div>
+            </div>
+
+        </header>
+        <center>
+        <form action='./login' method="post" class="form">
+            {% csrf_token %}
+            <table border>
+        {{loginform.as_p}}</table>
+         <input type="submit" value="login">                                                                                                               
+
+        </form></center>
+    </body>
+    </html>

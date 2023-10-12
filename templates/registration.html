@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>registration page</title>
+        <style>
+            .table{
+                padding:50px;
+                width:50px;
+                border:'1px solid pink'
+            }
+            form{
+                padding:50px;
+               
+             
+            }
+            input[type="submit"]{
+                color:white     ;
+                padding:10px;
+                align=left;
+                
+                background-color:green;
+            }
+            button{
+                color:white     ;
+                background-color:green;
+            }
+        </style>
+    </head>
+    <body bgcolor='pink'>
+        <center>
+        <form action='./reg' method="post">
+            {% csrf_token %}
+            <table border>
+         {{Regform.as_table}}
+            </table><br>
+         <input type="submit" value="Register"><br>
+         
+        </form></center>
+        <center>
+        <a href="./logininput"><button>click here for login </button></a>
+        </center>
+    </body>
+    </html>
